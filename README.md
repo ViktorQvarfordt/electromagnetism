@@ -1,8 +1,8 @@
 # A mathematical approach to electromagnetism
 
-**Note:** At this stage this is no more than an experiment.
+**Note:** At this stage this is nothing more than an experiment.
 
-The PDF is available from
+The PDF is available
 [here](https://www.dropbox.com/s/m48ha31d68autfc/electromagnetism.pdf),
 my latest compiled version. *(Only the source is hosted in this repo,
 the pdf is not included. Git is not really suited for tracking binary
@@ -28,8 +28,7 @@ LaTeX-ify and add to the document.
 
 ## Compiling document from source
 
-Plain and simple
-
+Plain and simple:
 ```
 pdflatex electromagnetism.tex
 ```
