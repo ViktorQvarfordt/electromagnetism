@@ -1,0 +1,18 @@
+\ProvidesPackage{mathmacros}[2013/01/13 Custom Package]
+
+\RequirePackage{amssymb}
+
+\newcommand{\iI}[2]{\int#1\;\mathrm{d}#2}                        % indefinite integral
+\newcommand{\dI}[4]{\int_{#3}^{#4} #1\;\mathrm{d}#2}             % definite integral
+\newcommand{\D}[2]{\frac{\mathrm{d}#1}{\mathrm{d}#2}}            % 1st derivative
+\newcommand{\Dop}[2]{\frac{\mathrm{d}}{\mathrm{d}#2}\left(#1\right)}          % 1st derivative as operator
+\newcommand{\Dn}[3]{\frac{\mathrm{d}^{#3}#1}{\mathrm{d}#2^{#3}}} % nth derivative
+\newcommand{\PD}[2]{\frac{\partial #1}{\partial #2}}              % 1st partial derivative
+\newcommand{\PDop}[1]{\frac{\partial}{\partial #1}}              % 1st partial derivative
+\newcommand{\PDn}[3]{\frac{\partial^{#3}#1}{\partial#2^{#3}}}    % nth partial derivative
+
+\let\veca\vec                                                    % vector arrow above
+\renewcommand{\vec}[1]{\boldsymbol{#1}}                          % vector bold (this is more common,
+                                                                 % so it gets the standard name)
+
+\newcommand{\vhat}[1]{\hat{\vec{#1}}}

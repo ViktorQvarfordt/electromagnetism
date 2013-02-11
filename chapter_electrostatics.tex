@@ -1,0 +1,141 @@
+\chapter{Electrostatics}
+
+Assume that classical mechanics holds. We then define a new property
+for all bodies, \emph{charge}, it can take any
+\footnote{In reality charges are quantized. However, this is of no
+  interest in general, so we proceed with as few assumptions as
+  possible. Also, on a macroscopic scale, continuous charge
+  distributions are good approximations.}
+value in $\mathbb{R}$. It is the effects of this new property that is
+studied in this document.
+
+\emph{Note that electrostatics only considers static, non-moving
+  charges. See electrodynamics for the non-static case.}
+
+
+
+
+\section{Laws}
+
+Experimental facts, can be considered as the axioms of fundamental
+assumptions of the theory.
+
+Note that Coulomb's and Gauss's law should not be considered as
+separate laws, see theorem~\ref{thm:coulomb-gauss}.
+
+
+\subsection{Coulomb's law}
+
+Let $q_1$ and $q_2$ be two point charges, with position $\vec{r}_1$
+and $\vec{r}_2$ respectively. Then there is a force exerted between
+the particles, given by
+\begin{equation*}
+  \vec{F}_{12} = \frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r_{12}^2}\vhat{r}_\text{12}
+\end{equation*}
+
+
+\subsection{Gauss's Law}
+
+Let bla and bla, then
+\begin{equation*}
+  \oiint_S \vec{E} \cdot d\vec{S} = \frac{Q}{\epsilon_0}
+\end{equation*}
+
+
+
+
+\section{Fundamental concepts and definitions}
+
+\subsection{Electrostatic field $\vec{E}$}
+
+Let $Q$ be a point charge and $\vec{r}$ be the position vector
+relative to $Q$. We define the electrostatic field $\vec{E}$ caused by
+$Q$ as
+\begin{equation*}
+  \vec{E}(\vec{r}) = \frac{1}{4\pi\epsilon_0}\frac{Q}{r^2}\vhat{r}
+\end{equation*}
+
+\paragraph{Motivation} The force $\vec{F}$ exerted by $Q$ on a charge $q$ is
+given by $\vec{F} = q\vec{E}$.
+
+\subsection{Electrostatic potential $\phi$}
+\label{def:potential}
+\begin{equation*}
+  \vec{E} = - \nabla\phi
+\end{equation*}
+
+\subsection{Electrostatic potential energy $U$}
+
+\subsection{Conductor}
+
+\subsection{Dielectric}
+
+\paragraph{Remark} Insulators are closely related. Dielectrics are
+used to \emph{store electrical charges}, while insulators are used to
+\emph{block the flow of electric charges}. While all dielectrics are
+insulators, all insulators aren't dielectric; because they cannot
+store charges, unlike dielectrics.
+\footnote{\url{http://wiki.answers.com/Q/What_is_the_Difference_between_dielectric_and_insulator}}
+
+
+
+
+\section{Theorems}
+
+
+\subsection{Equivalence between Coulomb's and Gauss's laws}
+\label{thm:coulomb-gauss}
+Gauss's law holds less information than Coulomb's law. Coulomb's law
+implies spherical symmetry of $\vec{E}$ around a point charge, Gauss's
+law holds no information of $\nabla\times\vec{E}$.
+
+Gauss's law can be derived from Coulomb's law. To derive Coulomb's law
+from Gauss's law, one also needs the assumption $\nabla\times\vec{E}=0$.
+
+
+\subsection{$\vec{E}$ is conservative, path independent and has a potential}
+\label{thm:conservative}
+The three statements are equivalent.
+
+
+\subsection{$\nabla\times\vec{E} = 0$}
+\begin{proof}
+  By Stokes' theorem we have
+  \begin{equation*}
+    \oint_c \vec{E}\cdot d\vec{l} = \iint_S (\nabla\times\vec{E})\;d\vec{S}
+  \end{equation*}
+  By theorem \ref{thm:conservative} ($\vec{E}$ being conservative) we
+  have $\oint_c \vec{E}\cdot d\vec{l} = 0$ for any choice of $c$. Choose
+  $c$ so that only a point is enclosed by $c$. It follows by Stokes'
+  theorem that $\nabla\times\vec{E}=0$ at that point. Since $E$ is
+  conservative everywhere, it follows that $\nabla\times\vec{E}=0$
+  always holds.
+\end{proof}
+
+\begin{proof}[Alternative proof]
+  In general we have
+  \begin{align*}
+    \nabla\times\nabla\phi &= \left(\PDop{x},\PDop{y},\PDop{z}\right)\times\left(\PD{\phi}{x},
+    \PD{\phi}{y}, \PD{\phi}{z}\right) \\
+    &= \left(
+         \PDop{y}\PD{\phi}{z}-\PDop{z}\PD{\phi}{y},
+         \PDop{z}\PD{\phi}{x}-\PDop{x}\PD{\phi}{z},
+         \PDop{x}\PD{\phi}{y}-\PDop{y}\PD{\phi}{x}
+       \right) \\
+    &= \vec{0}
+  \end{align*}
+  Using this and definition \ref{def:potential} ($\vec{E} = - \nabla\phi$),
+  we get
+  \begin{equation*}
+    \nabla\times\vec{E} = \nabla\times(-\nabla\phi) =
+    -\nabla\times\nabla\phi = \vec{0}
+  \end{equation*}
+\end{proof}
+
+
+\section{General results}
+
+\subsection{Electric field of conducting plane}
+\begin{equation*}
+  \vec{E} = \frac{\sigma}{\epsilon_0}\vhat{z}
+\end{equation*}
