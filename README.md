@@ -3,7 +3,7 @@
 **Note:** At this stage this is nothing more than an experiment.
 
 The PDF is available
-[here](https://www.dropbox.com/s/m48ha31d68autfc/electromagnetism.pdf),
+[here](https://dl.dropbox.com/s/m48ha31d68autfc/electromagnetism.pdf),
 my latest compiled version. *(Only the source is hosted in this repo,
 the pdf is not included. Git is not really suited for tracking binary
 files — and Dropbox is not well suited for multi-user editing.)*
