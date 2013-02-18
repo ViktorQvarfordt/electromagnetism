@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt]{book}
+\documentclass[a4paper, oneside, 11pt]{book}
 
 %% Use this if XeTeX.
 % \usepackage{fontspec}
@@ -9,11 +9,13 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{esint}  % closed surface integral symbol
-\usepackage[left=3cm, right=3cm]{geometry}
+%% \usepackage[left=3cm, right=3cm]{geometry}
 \usepackage[hidelinks]{hyperref}
 
 % Local package for convenience.
 \usepackage{mathmacros}
+\let\oldepsilon\epsilon
+\let\epsilon\varepsilon
 
 %   TODO:
 % Should theorems be used rather than subsubsections?
@@ -27,5 +29,7 @@
 \include{chapter_electrostatics}
 \include{chapter_magnetostatics}
 \include{chapter_electrodynamics}
+\include{chapter_components}
+\include{chapter_circuits}
 
 \end{document}

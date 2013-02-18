@@ -46,7 +46,10 @@ Let bla and bla, then
 
 \section{Fundamental concepts and definitions}
 
+\subsection{Charge and charge density}
+
 \subsection{Electrostatic field $\vec{E}$}
+\label{def:electric field}
 
 Let $Q$ be a point charge and $\vec{r}$ be the position vector
 relative to $Q$. We define the electrostatic field $\vec{E}$ caused by
@@ -67,8 +70,10 @@ given by $\vec{F} = q\vec{E}$.
 \subsection{Electrostatic potential energy $U$}
 
 \subsection{Conductor}
+\label{def:conductor}
 
 \subsection{Dielectric}
+\label{def:dielectric}
 
 \paragraph{Remark} Insulators are closely related. Dielectrics are
 used to \emph{store electrical charges}, while insulators are used to
@@ -136,7 +141,48 @@ The three statements are equivalent. \url{http://en.wikipedia.org/wiki/Conservat
 
 \section{General results}
 
+\subsection{Uniform charge distribution}
+\label{uniform charge distribution}
+The charge distribution of a conductor in the absence of an electric
+field is uniform.
+\begin{proof}
+  Assume a conductor with non-zero net charge. Each charges exerts a
+  repelling force on all other charges, forcing the charges to spread
+  out uniformly in the conductor.
+\end{proof}
+
 \subsection{Electric field of conducting plane}
+\label{electric field of conducting plane}
+
+Assume a conducting plane with surface charge density $\sigma$, which
+by theorem~\ref{uniform charge distribution} must be uniform. If the
+plane is infinitely large, the electric field is constant with magnitude
 \begin{equation*}
-  \vec{E} = \frac{\sigma}{\epsilon_0}\vhat{z}
+  E = \frac{\sigma}{2\epsilon_0}
 \end{equation*}
+
+\subsubsection{Finite disc}
+
+Assume the conducting plane to be a disc with radius $R$, then the
+electric field on distance $z$ above the midpoint of the disk is
+\begin{equation*}
+  \vec{E}(z) = ...
+\end{equation*}
+\begin{proof}
+  By definition~\ref{def:electric field} we get a contribution
+  $d\vec{E}$ to the electric field from a point on conducting plane
+  \begin{equation*}
+    d\vec{E}(z)=\frac{1}{4\pi\epsilon_0}\frac{\sigma}{r^2}
+  \end{equation*}
+\end{proof}
+
+\subsubsection{Infinite plane}
+\begin{equation*}
+  \vec{E}(z) = \frac{\sigma}{2\epsilon_0}\vhat{z}
+\end{equation*}
+\begin{proof}[Proof by considering an infinite disc]
+  Consider the limit $R \to \infty$.
+\end{proof}
+\begin{proof}[Proof by Gauss's law]
+  Cylindrical Gauss surface\ldots
+\end{proof}
