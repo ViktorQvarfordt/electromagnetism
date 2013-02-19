@@ -1,0 +1,53 @@
+\documentclass[a4paper, oneside, 11pt, draft]{book}
+
+% \usepackage{fontspec}     % Use this if XeTeX
+\usepackage[T1]{fontenc}    % Use these two if LaTeX and
+\usepackage[utf8]{inputenc} % unicode support is needed.
+
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{esint} % provides closed surface integral symbol \oiint
+% \usepackage[left=3cm, right=3cm]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+% Local package for convenience.
+\usepackage{mathmacros}
+
+% Additional math typesetting stuff
+\let\oldepsilon\epsilon
+\let\epsilon\varepsilon
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+
+% Formatting
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+
+
+%% Easy todos %%
+\usepackage{tocloft}
+\usepackage{color}
+
+\newlistof[section]{todos}{tod}{List of todos}
+\newcommand{\todolist}[1]{%
+  \refstepcounter{todos}
+  \addcontentsline{tod}{todos}{\protect\numberline{\thetodos} #1}}
+\newcommand{\todo}[1]{%
+  \todolist{}\noindent\textcolor{red}{TODO:} #1}
+%% end todos %%
+
+
+\begin{document}
+\tableofcontents
+\listoftodos
+
+\todo{Should theorems be used rather than subsubsections? What about
+  getting a reference in the table of contents?}
+
+\include{chapter_electrostatics}
+\include{chapter_magnetostatics}
+\include{chapter_electrodynamics}
+\include{chapter_components}
+\include{chapter_circuits}
+\include{chapter_mathematics}
+
+\end{document}

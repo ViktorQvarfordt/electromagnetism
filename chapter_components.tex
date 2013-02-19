@@ -1,7 +1,7 @@
 \chapter{Electrical components}
 
 
-\section{Capacitor -- \normalfont parallel-plate}
+\section{Parallel-plate capacitor}
 
 \emph{This section assumes familiarity with the following concepts.}
 \begin{itemize}
@@ -15,7 +15,8 @@ positioned parallel and opposite to each other with equal area and
 equal but opposite charge. We say that a capacitor has charge $Q$ when
 the plates have charge $Q$ and $-Q$ respectively.
 
-\subsection{Electric field of parallel-plate capacitor}
+\subsection{Electric field}
+\label{capacitor electric field}
 
 If the edge effects of the plates are ignored, the electric field
 vanishes outside the capacitor and inside it becomes uniform with
@@ -29,11 +30,62 @@ magnitude
     plane}. And blabla it follows.
 \end{proof}
 
-\subsection{Capacitance $C$}
+
+\subsection{Potential difference / voltage}
+\label{capacitor voltage}
+
+If the plates are separated with distance $d$ the voltage is given by
+\begin{equation*}
+  V = Ed
+\end{equation*}
+
+\begin{proof}
+  Let $c$ be a line connecting the two plates, using
+  definition~\ref{def:electric potential} and ignoring the sign (see
+  the remark), we get
+  \begin{equation*}
+    V = \int_c \vec{E}\cdot d\vec{l} = E\int_c dl = Ed \qedhere
+  \end{equation*}
+\end{proof}
+
+\paragraph{Remark} When considering the potential difference between
+two objects, like the plates, the sign of the result will differ
+depending on which point is taken as the ``starting point''. It is
+thus common to let $V$ implicitly refer to $\abs{V}$.
+
+
+\subsection{Capacitance}
 
 Assume a parallel-plate capacitor with charge $Q$, area $A$ and
-separation $d$.
+separation $d$. The capacitance of the capacitor is given by
+\begin{equation*}
+  C = \epsilon_0 \frac{A}{d}
+\end{equation*}
 
+\begin{proof}
+  The results follows directly from the relations
+  \begin{align*}
+    C \underset{(1)}{=} \frac{Q}{V} && Q \underset{(2)}{=} \sigma A &&
+    V \underset{(3)}{=} Ed && E \underset{(4)}{=} \frac{\sigma}{\epsilon_0}
+  \end{align*}
+  with motivation:
+  (1) by definition~\ref{def:capacitance},
+  (2) by definition~\ref{charge density},
+  (3) by \ref{capacitor voltage},
+  (4) by \ref{capacitor electric field}.
+\end{proof}
+
+
+\subsection{Stored energy}
+
+Energy stored in a capacitor is given by
+\begin{equation*}
+  W_C = \frac{1}{2}QV = \frac{1}{2}CV^2 = \frac{1}{2}\frac{Q}{C}
+\end{equation*}
+
+\begin{proof}
+  \ldots
+\end{proof}
 
 
 \section{Inductor}

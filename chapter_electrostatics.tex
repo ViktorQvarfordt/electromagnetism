@@ -17,7 +17,7 @@ studied in this document.
 
 \section{Laws}
 
-Experimental facts, can be considered as the axioms of fundamental
+Experimental facts, can be considered as the axioms or fundamental
 assumptions of the theory.
 
 Note that Coulomb's and Gauss's law should not be considered as
@@ -46,7 +46,10 @@ Let bla and bla, then
 
 \section{Fundamental concepts and definitions}
 
+\todo{This section needs \emph{structure} (and yes, more content)}.
+
 \subsection{Charge and charge density}
+\label{charge}\label{charge density}
 
 \subsection{Electrostatic field $\vec{E}$}
 \label{def:electric field}
@@ -62,7 +65,7 @@ $Q$ as
 given by $\vec{F} = q\vec{E}$.
 
 \subsection{Electrostatic potential $\phi$}
-\label{def:potential}
+\label{def:electric potential}
 \begin{equation*}
   \vec{E} = - \nabla\phi
 \end{equation*}
@@ -82,7 +85,24 @@ insulators, all insulators aren't dielectric; because they cannot
 store charges, unlike dielectrics.
 \footnote{\url{http://wiki.answers.com/Q/What_is_the_Difference_between_dielectric_and_insulator}}
 
+\subsection{Capacitance $C$}
+\label{def:capacitance}
 
+\subsection{Permitivity $\epsilon$}
+\begin{equation*}
+  \epsilon = \epsilon_r\epsilon_0 = (1+\chi_e)\epsilon_0
+\end{equation*}
+
+\subsection{Electric susceptibility $\chi_e$}
+The susceptibility of a material or substance describes its response
+to an applied field.
+
+\subsection{Magnetic susceptibility $\chi_m$}
+The susceptibility of a material or substance describes its response
+to an applied field.
+
+\subsection{Linear material}
+\todo{Is this the correct term? I don't see it being used on the web.}
 
 
 \section{Theorems}
@@ -139,6 +159,8 @@ The three statements are equivalent. \url{http://en.wikipedia.org/wiki/Conservat
 \end{proof}
 
 
+
+
 \section{General results}
 
 \subsection{Uniform charge distribution}
@@ -160,6 +182,7 @@ plane is infinitely large, the electric field is constant with magnitude
 \begin{equation*}
   E = \frac{\sigma}{2\epsilon_0}
 \end{equation*}
+This is shown in \ref{electric field of conducting plane infinite}.
 
 \subsubsection{Finite disc}
 
@@ -177,6 +200,7 @@ electric field on distance $z$ above the midpoint of the disk is
 \end{proof}
 
 \subsubsection{Infinite plane}
+\label{electric field of conducting plane infinite}
 \begin{equation*}
   \vec{E}(z) = \frac{\sigma}{2\epsilon_0}\vhat{z}
 \end{equation*}
